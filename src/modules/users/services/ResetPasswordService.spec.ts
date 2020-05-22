@@ -23,7 +23,7 @@ describe('ResetPasswordService', () => {
     );
   });
 
-  it('Shoulde be able to reset the password', async () => {
+  it('Should be able to reset the password', async () => {
     const user = await fakeUsersRepository.create({
       name: 'John Doe',
       email: 'johndoe@example.com',
@@ -67,7 +67,7 @@ describe('ResetPasswordService', () => {
     ).rejects.toBeInstanceOf(AppError);
   });
 
-  it('Shoulde not be able to reset password if passed more than 2 hours', async () => {
+  it('Should not be able to reset password if passed more than 2 hours', async () => {
     const user = await fakeUsersRepository.create({
       name: 'John Doe',
       email: 'johndoe@example.com',
