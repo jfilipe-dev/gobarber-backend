@@ -23,6 +23,14 @@ class Appointment {
   @JoinColumn({ name: 'provider_id' })
   provider: User;
 
+  @Column('varchar')
+  user_id: string;
+
+  // Relacionamento
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'user_id' })
+  user: User;
+
   @Column('timestamp without time zone')
   date: Date;
 
